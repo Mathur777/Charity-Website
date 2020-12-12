@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity </title>
+
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+  
+  <!--bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!--internal CSS-->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!--font awesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+
+<script src="https://js.instamojo.com/v1/checkout.js"></script>
+<script>
+  /* Start client-defined Callback Handler Functions */
+  function onOpenHandler () {
+    alert('Payments Modal is Opened');
+  }
+
+  function onCloseHandler () {
+    alert('Payments Modal is Closed');
+  }
+
+  function onPaymentSuccessHandler (response) {
+    alert('Payment Success');
+    console.log('Payment Success Response', response);
+  }
+
+  function onPaymentFailureHandler (response) {
+    alert('Payment Failure');
+    console.log('Payment Failure Response', response);
+  }
+  /* End client-defined Callback Handler Functions */
+
+  /* Configuring Handlers */
+  Instamojo.configure({
+    handlers: {
+      onOpen: onOpenHandler,
+      onClose: onCloseHandler,
+      onSuccess: onPaymentSuccessHandler,
+      onFailure: onPaymentFailureHandler
+    }
+  });
+  
+  function onButtonClick() {
+    Instamojo.open('https://test.instamojo.com/@sumitmathurl777');
+  }
+</script>
+</head>
+
+<body>
+  <section class="coloured-section" id="title">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand text-danger" href="#"><i class="fas fa-hand-holding-heart"></i></i>Charity</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav  ml-auto">
+            <li class="nav-item">
+              <a class="nav-link text-danger href="#title">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-danger" href="#features">Mission</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-danger" href="#footer">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <!-- Title -->
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="big-heading">Donate For Poor Child Education Spreads Smiles</h1>
+          <div class="" >
+            <button onclick="onButtonClick()" type="button" class="btn btn-danger btn-lg" >Donate Now</button>
+          </div>
+        </div>
+
+
+        <div class="col-lg-6">
+          <img class="title-image" src="images/child.png" alt="child-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Features -->
+
+  <section class="white-section" id="features">
+    <div class="container-fluid">
+      <h1 class="my-text ">Our Mission</h1>
+      <div class="row">
+        <div class="feature-box col-lg-4">
+  
+                <div class="card border-success mx-sm-1 p-3">
+                  <i class=" icon fas fa-graduation-cap fa-4x text-dark"></i><hr>
+                  <h3 class="feature-title"> Education</h3>
+                  <p>A world of learners where children gain a passport to the world.</p>
+                </div>
+
+
+
+
+
+        </div>
+
+        <div class="feature-box col-lg-4">
+          
+          <div class="card border-success mx-sm-1 p-3">
+          <i class=" icon fas fa-bullseye fa-4x text-primary"></i><hr>
+          <h3 class="feature-title"> Nutrition</h3>
+          <p>We work to address the causes of malnutrition,for a better body and mind.</p>
+        </div>
+      </div>
+        <div class="feature-box col-lg-4">
+          <div class="card border-success mx-sm-1 p-3">
+          <i class="icon fas fa-heart fa-4x text-danger"></i><hr>
+          <h3 class="feature-title"> Support</h3>
+          <p>Our Support interventions enable families to  provide better for their children.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-12">
+      <div class="content">
+        <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+        <form action="/" method="post" class="form-signin">
+      <div class="input-group">
+             <input type="email" name="email" class="form-control" placeholder="Enter your email">
+             <span class="input-group-btn">
+             <button class="btn" type="submit">Subscribe Now</button>
+             </span>
+              </div>
+              </form>
+      </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+
+
+  <!-- Footer -->
+
+  <footer class="white-section" id="footer">
+    <div class="container">
+
+    <a href="https://www.linkedin.com/in/sumit00mathur/"><i class="fab fa-linkedin social-logo fa-2x"></i></a>   
+    <a href="https://github.com/Mathur777"><i class="fab fa-github social-logo fa-2x text-dark"></i></a>
+      <a href=""><i class="fas fa-envelope social-logo fa-2x text-danger"></i></a>
+      <p class="text-white">© Copyright 2020 made by Sumit</p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
